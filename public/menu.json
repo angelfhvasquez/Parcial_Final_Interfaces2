@@ -1,0 +1,9 @@
+[
+  { "id": 1, "name": "BLT Supreme", "description": "Bacon, lechuga y tomate + salsa secreta.", "price": "49", "tags": ["New", "Top"], "image": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=900&q=80" },
+  { "id": 2, "name": "Lucy Clásica", "description": "Carne premium, doble queso cheddar.", "price": "42", "tags": ["Best seller"], "image": "https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=900&q=80" },
+  { "id": 3, "name": "Doble Queso", "description": "Doble carne para los más hambrientos.", "price": "54", "tags": ["Popular"], "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80" },
+  { "id": 4, "name": "Veggie Lovers", "description": "Portobello, hummus y aguacate.", "price": "41", "tags": ["Vegana"], "image": "https://images.unsplash.com/photo-1551782450-2d1fc7a1e29b?auto=format&fit=crop&w=900&q=80" },
+  { "id": 5, "name": "Picante Lucy", "description": "Jalapeños, salsa habanero y queso pepper.", "price": "50", "tags": ["Picante"], "image": "https://images.unsplash.com/photo-1604917861592-4f91d7e08e6e?auto=format&fit=crop&w=900&q=80" },
+  { "id": 6, "name": "BBQ House", "description": "Cebolla caramelizada y BBQ casera.", "price": "52", "tags": ["Especial"], "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" },
+  { "id": 7, "name": "Fuego Triple", "description": "Triple carne con queso y salsa picante.", "price": "58", "tags": ["Top"], "image": "https://images.unsplash.com/photo-1571091718767-18c8f9e5861b?auto=format&fit=crop&w=900&q=80" }
+]

@@ -1,34 +1,50 @@
 import { Link, useLocation } from 'react-router-dom';
+import { useCart } from '../contexts/CartContext';
+import { useAuth } from '../contexts/AuthContext';
 import './Header.css';
+
+const navItems = [
+  { label: 'Inicio', path: '/' },
+  { label: 'Menú', path: '/menu' },
+  { label: 'Blog', path: '/blog' },
+  { label: 'Nosotros', path: '/about' },
+  { label: 'Contacto', path: '/contact' },
+];
 
 export default function Header() {
   const location = useLocation();
+  const { getTotalItems } = useCart();
+  const { user, logout } = useAuth();
 
-  const isActive = (path) => {
-    return location.pathname === path ? 'active' : '';
-  };
+  const isActive = (path) => (location.pathname === path ? 'active' : '');
 
   return (
     <header className="header">
-      <div className="container">
-        <div className="header-content">
-          <Link to="/" className="logo">
-            JUICY LUCY
-          </Link>
+      <div className="container header-content">
+        <Link to="/" className="logo">JUICY LUCY</Link>
+        <div className="right-actions">
           <nav className="nav">
-            <Link to="/" className={`nav-link ${isActive('/')}`}>
-              INICIO
-            </Link>
-            <Link to="/menu" className={`nav-link ${isActive('/menu')}`}>
-              MENU
-            </Link>
-            <Link to="/about" className={`nav-link ${isActive('/about')}`}>
-              NOSOTROS
-            </Link>
-            <Link to="/contact" className={`nav-link ${isActive('/contact')}`}>
-              CONTACTO
-            </Link>
+            {navItems.map((item) => (
+              <Link key={item.path} to={item.path} className={`nav-link ${isActive(item.path)}`}>
+                {item.label}
+              </Link>
+            ))}
           </nav>
+
+          <div className="auth-group">
+            {user ? (
+              <>
+                <span className="welcome">Hola, {user.name}</span>
+                <button className="logout-btn" onClick={logout}>Cerrar sesión</button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="nav-link auth">Iniciar sesión</Link>
+                <Link to="/register" className="nav-link auth">Registrarse</Link>
+              </>
+            )}
+            <Link to="/cart" className="cart-link">🛒{getTotalItems() > 0 && <span className="cart-count">{getTotalItems()}</span>}</Link>
+          </div>
         </div>
       </div>
     </header>

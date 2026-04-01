@@ -1,0 +1,37 @@
+.testimonials {
+  padding: 3rem 0;
+}
+
+.testimonials h2 {
+  color: var(--neutral);
+  text-align: center;
+  margin-bottom: 1.9rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.testimonial-card {
+  background: rgba(17, 24, 44, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+}
+
+.rating {
+  color: #ffce4f;
+  margin-bottom: 0.7rem;
+}
+
+.testimonial-text {
+  color: var(--text-light);
+  margin-bottom: 0.9rem;
+}
+
+.testimonial-author {
+  color: var(--text-muted);
+  font-weight: 600;
+}

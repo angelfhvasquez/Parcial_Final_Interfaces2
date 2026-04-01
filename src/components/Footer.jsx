@@ -6,29 +6,42 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <div className="container">
-        <div className="footer-content">
-          <div className="footer-section">
-            <h3>JUICY LUCY</h3>
-            <p>Las mejores hamburguesas artesanales de Lima</p>
-          </div>
-          <div className="footer-section">
-            <h3>Enlaces</h3>
-            <Link to="/">Inicio</Link>
-            <Link to="/menu">Menú</Link>
-            <Link to="/about">Nosotros</Link>
-            <Link to="/contact">Contacto</Link>
-          </div>
-          <div className="footer-section">
-            <h3>Horarios</h3>
-            <p>Lunes a Domingo</p>
-            <p>11:00 AM - 11:00 PM</p>
+      <div className="container footer-content">
+        <div className="footer-block">
+          <h3>JUICY LUCY</h3>
+          <p>Hamburguesas artesanales hechas con técnica, sabor y tradición.</p>
+          <div className="social-links">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="WhatsApp">💬</a>
           </div>
         </div>
-        <div className="footer-bottom">
-          <p>&copy; {currentYear} Juicy Lucy. Todos los derechos reservados.</p>
+
+        <div className="footer-block">
+          <h3>Enlaces rápidos</h3>
+          <Link to="/">Inicio</Link>
+          <Link to="/menu">Menú</Link>
+          <Link to="/about">Nosotros</Link>
+          <Link to="/contact">Contacto</Link>
+        </div>
+
+        <div className="footer-block">
+          <h3>Contacto</h3>
+          <span>📍 Lima, Perú</span>
+          <span>📞 +51 1 234 5678</span>
+          <span>⏰ 11:00 - 23:00</span>
+        </div>
+
+        <div className="footer-block">
+          <h3>Suscríbete</h3>
+          <p>Recibe ofertas y novedades premium.</p>
+          <form className="newsletter-form" onSubmit={(e) => { e.preventDefault(); alert('¡Suscripción confirmada!'); e.currentTarget.reset(); }}>
+            <input type="email" placeholder="Tu correo" required />
+            <button type="submit">Enviar</button>
+          </form>
         </div>
       </div>
+      <div className="footer-bottom">&copy; {currentYear} Juicy Lucy. Todos los derechos reservados.</div>
     </footer>
   );
 }
