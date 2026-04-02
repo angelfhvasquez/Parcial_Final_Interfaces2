@@ -45,7 +45,7 @@ export default function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Router>
+        <Router basename="/Parcial_Final_Interfaces2/">
           <div className="app">
             <Header />
             <AnimatedRoutes />
