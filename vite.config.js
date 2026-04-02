@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Parcial_Final_Interfaces2/"
+  base: "/Parcial_Final_Interfaces2/" 
 })

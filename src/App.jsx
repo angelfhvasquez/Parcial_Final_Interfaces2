@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from 'framer-motion';
 import { CartProvider } from './contexts/CartContext';
 import { AuthProvider } from './contexts/AuthContext';
@@ -45,13 +45,13 @@ export default function App() {
   return (
     <AuthProvider>
       <CartProvider>
-        <Router basename="/Parcial_Final_Interfaces2/">
+        <HashRouter>
           <div className="app">
             <Header />
             <AnimatedRoutes />
             <Footer />
           </div>
-        </Router>
+        </HashRouter>
       </CartProvider>
     </AuthProvider>
   );
